@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PantauDewan - Dashboard Transparansi Legislatif</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-landmark"></i> Pantau DPRD JATIM
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Beranda</a>
+                <a href="jadwal.html" class="nav-link">Jadwal Paripurna</a>
+                <a href="perda.html" class="nav-link">Daftar Perda</a>
+                <a href="aspirasi.html" class="nav-link">Aspirasi</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        
+        <header class="dashboard-header">
+            <h1>Dashboard Rapat Paripurna</h1>
+            <p class="subtitle">Agenda: Pembahasan RUU Tata Ruang Daerah - 18 Juni 2026</p>
+        </header>
+
+        <div class="dashboard-grid">
+            
+            <div class="left-column">
+                
+                <section class="card shadow">
+                    <div class="card-header">
+                        <h2><i class="fas fa-users icon-blue"></i> Live Kehadiran</h2>
+                        <span class="badge badge-live animate-pulse">
+                            <i class="fas fa-circle"></i> LIVE
+                        </span>
+                    </div>
+                    
+                    <div class="progress-section">
+                        <div class="progress-labels">
+                            <span class="progress-title">Total Kehadiran (Kuorum: 50%+1)</span>
+                            <span class="progress-percentage">38 / 50 Anggota (76%)</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" style="width: 76%"></div>
+                        </div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="attendance-table">
+                            <thead>
+                                <tr>
+                                    <th>Nama Anggota</th>
+                                    <th>Fraksi</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="font-medium">Rizki Fadilah Aureliansyah</td>
+                                    <td>Fraksi A</td>
+                                    <td><span class="badge badge-success">Hadir</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="font-medium">Ripaldi </td>
+                                    <td>Fraksi B</td>
+                                    <td><span class="badge badge-success">Hadir</span></td>
+                                </tr>
+                                <tr class="row-absent">
+                                    <td class="font-medium">Reihan</td>
+                                    <td>Fraksi C</td>
+                                    <td><span class="badge badge-danger">Absen</span></td>
+                                </tr>
+                                  <tr>
+                                    <td class="font-medium">Ahmad Syahroni</td>
+                                    <td>Fraksi B</td>
+                                    <td><span class="badge badge-danger">Absen</span></td>
+                                </tr>
+                                 </tr>
+                                  <tr>
+                                    <td class="font-medium">Mas Buahlil Ganteng</td>
+                                    <td>Fraksi A</td>
+                                    <td><span class="badge badge-danger">Absen</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="card shadow">
+                    <div class="card-header">
+                        <h2><i class="fas fa-file-signature icon-blue"></i> Tracking Perda Inisiatif</h2>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item completed">
+                            <div class="timeline-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Draf Diusulkan</h3>
+                                <p>Draf Raperda Pengelolaan Sampah Terpadu diajukan oleh Komisi III. (10 Mei 2026)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item active">
+                            <div class="timeline-icon animate-spin-slow">
+                                <i class="fas fa-spinner"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Pembahasan Pansus <span class="badge badge-info">Sedang Berlangsung</span></h3>
+                                <p>Sedang dibahas di tingkat Panitia Khusus bersama pakar lingkungan. (Saat ini)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item pending">
+                            <div class="timeline-icon"></div>
+                            <div class="timeline-content">
+                                <h3>Paripurna Pengesahan</h3>
+                                <p>Menunggu jadwal rapat paripurna tingkat akhir.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="right-column">
+                <section class="card card-gradient shadow">
+                    <div class="card-header border-none">
+                        <h2 class="text-white"><i class="fas fa-bullhorn"></i> Suara Warga</h2>
+                    </div>
+                    <p class="form-description">Sampaikan aspirasi Anda langsung kepada legislator di dapil Anda.</p>
+                    
+                    <form class="aspiration-form">
+                        <div class="form-group">
+                            <label for="legislator">Pilih Legislator / Fraksi</label>
+                            <select id="legislator" class="form-control">
+                                <option value="">-- Pilih Anggota Dewan --</option>
+                                <option value="1">Budi Santoso (Dapil 1)</option>
+                                <option value="2">Siti Aminah (Dapil 2)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Rating Kinerja</label>
+                            <div class="star-rating">
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Pesan / Aspirasi</label>
+                            <textarea id="message" rows="5" class="form-control" placeholder="Tuliskan aspirasi Anda terkait infrastruktur, kesehatan, dll..."></textarea>
+                        </div>
+
+                        <button type="button" class="btn-submit">
+                            Kirim Aspirasi
+                        </button>
+                    </form>
+                </section>
+            </div>
+            
+        </div>
+    </main>
+</body>
+</html>
